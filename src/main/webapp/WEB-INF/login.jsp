@@ -1,8 +1,3 @@
-2 / 2
-
-Sure, here's an example of how you can modify the code to include fields for username and password in the form:
-
-jsp
 
 <%--
   Created by IntelliJ IDEA.
@@ -17,8 +12,8 @@ jsp
     <title>Login Form</title>
 </head>
 <body>
-
-<form method="post" action="jouer">
+<h3>Pour commencer une nouvelle partie, merci de vous identifier</h3>
+<form method="post" action="login">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>
 

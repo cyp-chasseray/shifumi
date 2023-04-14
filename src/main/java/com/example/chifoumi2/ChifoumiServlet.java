@@ -7,7 +7,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(urlPatterns = {"/","/jouer"})
+@WebServlet(urlPatterns = {"/secured","/secured/jouer"})
 public class ChifoumiServlet extends HttpServlet {
 
     @Override
@@ -54,9 +54,8 @@ public class ChifoumiServlet extends HttpServlet {
         } else {
             request.setAttribute("messageFinal", serveur.getMessageFinal());
         }
-
         //Déclenche l'envoi des attributs vers la page
-        RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/resultat.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/resultat.jsp");
         rd.forward(request, response);
     }
 }

@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Jeu de Chifoumi</h1>
-<form method="post" action="jouer">
+<form method="post" action="/secured/jouer">
   <p>
     <label for="choix">Choisissez votre coup :</label>
     <select id="choix" name="choix">
@@ -17,5 +17,6 @@
   </p>
   <button type="submit">Jouer</button>
 </form>
+<a href="/logout">Arreter la partie et se deconnecter</a>
 </body>
 </html>

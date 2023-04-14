@@ -10,11 +10,11 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/login")
+@WebServlet(urlPatterns = {"/","/login"})
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEBINF/login.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/login.jsp").forward(req, resp);
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,8 +26,8 @@ public class LoginServlet extends HttpServlet {
         session.setAttribute("username", "cyp");
         resp.sendRedirect(req.getContextPath() + "/secured");
     } else {
-        req.setAttribute("iserror", true);
-        req.getRequestDispatcher("/WEBINF/login.jsp").forward(req,resp);
+        System.out.println("here we are");
+        req.getRequestDispatcher("/WEB-INF/login.jsp").forward(req,resp);
     }
 
 }

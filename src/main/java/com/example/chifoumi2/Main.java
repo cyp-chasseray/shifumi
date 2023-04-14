@@ -6,6 +6,5 @@ public class Main {
         System.out.println(serveur.getChoix());
         System.out.println(serveur.getChoixOrdinateur());
         System.out.println(serveur.getMessageFinal());
-
     }
 }

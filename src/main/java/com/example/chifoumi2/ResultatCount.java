@@ -11,6 +11,4 @@ public class ResultatCount {
             defeatCount +=1;
         }
     }
-
-
 }
